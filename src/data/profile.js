@@ -3,8 +3,8 @@
 export const profile = {
   name: 'Sriram V',
   initials: 'SV',
-  // Put your headshot in /public (e.g. public/sriram.jpg) and set photo: '/sriram.jpg'
-  photo: '',
+  // Headshot lives in /public; leave empty to show initials instead
+  photo: 'sriram.jpg',
   role: 'DevOps Practice Lead',
   roleLine2: '& Multi-Cloud Platform Engineer',
   lede:
@@ -15,7 +15,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/imsriramvenkat/',
   linkedinLabel: 'linkedin.com/in/imsriramvenkat',
   github: '', // e.g. 'https://github.com/your-username' — leave empty to hide
-  languages: 'English (fluent) · Russian (conversational) · Tamil',
+  languages: 'English (fluent) · Tamil',
   footerBlurb:
     'DevOps Practice Lead building multi-cloud platforms, IoT telemetry infrastructure and compliant GenAI systems.',
 }
@@ -121,7 +121,7 @@ export const experience = [
     title: 'DevOps Associate',
     company: 'Opulence Technosoft',
     date: 'Aug 2019 – Jun 2022',
-    context: 'Two years on an energy-sector project with Russian-speaking engineering teams',
+    context: 'Two years on an energy-sector project',
     bullets: [
       'Built Jenkins, Maven and Azure DevOps pipelines; deployed to OpenShift via Tekton and BuildConfigs',
       'Wrote Go, Python and Shell automation; ran PostgreSQL and MySQL administration',
