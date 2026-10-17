@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body { @apply bg-ink text-fg font-mono antialiased; font-size: 15px; line-height: 1.7; }
+  h1, h2, h3 { text-wrap: balance; }
+  :focus-visible { outline: 2px solid theme('colors.teal'); outline-offset: 3px; border-radius: 6px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .animate-orbit, .animate-counter { animation: none !important; }
+  }
+}
+
+@layer components {
+  .wrap { @apply mx-auto max-w-[1180px] px-5; }
+  .grad { @apply bg-gradient-to-r from-teal to-cyan bg-clip-text text-transparent; }
+  .card { @apply rounded-xl border border-line bg-card; }
+  .tag { @apply rounded-md border border-[#1c3a42] bg-[#0d2229] px-2 py-0.5 text-[11px] text-[#9fe9df]; }
+  .btn { @apply inline-block rounded-lg border-2 border-teal px-5 py-2.5 text-sm font-semibold text-teal transition hover:bg-teal/15; }
+  .soc { @apply grid h-[46px] w-[46px] place-items-center rounded-full border-2 border-teal text-teal transition hover:bg-teal/15; }
+  .ic { @apply grid h-9 w-9 place-items-center rounded-[9px] border border-[#1d4d47] bg-[#123a36] text-teal transition hover:bg-[#174a44]; }
+  .section { @apply border-b border-line py-20; }
+}
+
+/* faint vertical grid lines behind the hero */
+.hero-lines::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .7;
+  background: linear-gradient(90deg,
+    transparent calc(25% - .5px), #163a35 25%, transparent calc(25% + .5px),
+    transparent calc(50% - .5px), #163a35 50%, transparent calc(50% + .5px),
+    transparent calc(75% - .5px), #163a35 75%, transparent calc(75% + .5px));
+}
